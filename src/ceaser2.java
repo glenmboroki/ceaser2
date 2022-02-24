@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class ceaser2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println(" the quick brown fox jumps over the lazy dog: ");
+        System.out.println(" text ");
         String plaintext = sc.nextLine();
-        System.out.println( "2");
+        System.out.println( "pattern");
         int shift = sc.nextInt();
         String ciphertext = "";
         char alphabet;
@@ -35,7 +35,7 @@ public class ceaser2 {
             }
 
         }
-        System.out.println(" he quick brown fox jumps over the lazy dog: " + ciphertext);
+        System.out.println(" text: " + ciphertext);
     }
 
 }
