@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Caesar2 {
+public class CaesarCipherJava {
     public static void main(String...s){
-        String message, encryptedMessage = "";
+        String message, decryptedMessage = "";
         int key;
         char ch;
         Scanner sc = new Scanner(System.in);
@@ -14,31 +14,30 @@ public class Caesar2 {
         for(int i = 0; i < message.length(); ++i){
             ch = message.charAt(i);
             if(ch >= 'a' && ch <= 'z'){
-                ch = (char)(ch + key);
+                ch = (char)(ch - key);
 
-                if(ch > 'z'){
-                    ch = (char)(ch - 'z' + 'a' - 1);
+                if(ch < 'a'){
+                    ch = (char)(ch + 'z' - 'a' + 1);
                 }
 
-                encryptedMessage += ch;
+                decryptedMessage += ch;
             }
             else if(ch >= 'A' && ch <= 'Z'){
-                ch = (char)(ch + key);
+                ch = (char)(ch - key);
 
-                if(ch > 'Z'){
-                    ch = (char)(ch - 'Z' + 'A' - 1);
+                if(ch < 'A'){
+                    ch = (char)(ch + 'Z' - 'A' + 1);
                 }
 
-                encryptedMessage += ch;
+                decryptedMessage += ch;
             }
             else {
-                encryptedMessage += ch;
+                decryptedMessage += ch;
             }
         }
-        System.out.println("Encrypted Message = " + encryptedMessage);
+        System.out.println("Decrypted Message = " + decryptedMessage);
     }
 }
-
 
 
 
